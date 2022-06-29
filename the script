@@ -699,10 +699,15 @@ end)
 local PlayerTab = Window:NewTab("Player")
 local PlayerSection = PlayerTab:NewSection("Player")
 
-PlayerSection:NewSlider("PlayerSpeed", "The name is very self-explanatory.", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+PlayerSection:NewSlider("PlayerSpeed", "The name is very self-explanatory.", 500, 16, function(s) -- 500 (MaxValue) | 16 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
 PlayerSection:NewSlider("JumpPower", "The name is very self-explanatory.", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+
+PlayerSection:NewSlider("FOV", "Field Of View Slider.", 500, 0, function(s) -- 120 (MaxValue) | 70 (MinValue)
+    game.Workspace.Camera.FieldOfView = s
 end)
