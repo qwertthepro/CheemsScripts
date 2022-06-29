@@ -1,13 +1,13 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("CheemsScripts", "Midnight")
-local Version = "BETA"
-local ScriptAmount = "12"
+local Version = "1.0"
+local ScriptAmount = "13"
 
 --Main stuff idk
 local HomeTab = Window:NewTab("Home")
 local HomeSection = HomeTab:NewSection("Home")
 
-HomeSection:NewLabel("Hello there! You are using Version" .. Version .. ".")
+HomeSection:NewLabel("Hello there! You are using Version " .. Version .. ".")
 
 HomeSection:NewLabel("Credits: specowos, MasterMZ, Dark Eccentric")
 
@@ -15,7 +15,7 @@ HomeSection:NewLabel("and the people who made the scripts!")
 
 HomeSection:NewLabel("Made by Qwert (go sub to me pls)")
 
-HomeSection:NewLabel("Script Amount:" .. ScriptAmount .. ".")
+HomeSection:NewLabel("Script Amount: " .. ScriptAmount .. ".")
 
 
 
@@ -708,6 +708,6 @@ PlayerSection:NewSlider("JumpPower", "The name is very self-explanatory.", 500, 
 end)
 
 
-PlayerSection:NewSlider("FOV", "Field Of View Slider.", 500, 0, function(s) -- 120 (MaxValue) | 70 (MinValue)
+PlayerSection:NewSlider("FOV", "Field Of View Slider.", 120, 70, function(s) -- 120 (MaxValue) | 70 (MinValue)
     game.Workspace.Camera.FieldOfView = s
 end)
